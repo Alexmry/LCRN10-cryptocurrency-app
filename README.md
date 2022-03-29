@@ -1,3 +1,11 @@
+# Youtube tutorial
+
+_https://www.youtube.com/watch?v=xBmx2eaozck&t=349s&ab_channel=ByProgrammers_
+
+## Set up
+
+
+
 # Let's Code React-Native
 
 ## [Watch it on YouTube](http://bit.ly/ByProgrammersYT)
