@@ -8,7 +8,7 @@ _https://www.youtube.com/watch?v=xBmx2eaozck&t=349s&ab_channel=ByProgrammers_
 
     npm start
 
-    react=native run-ios
+    react-native run-ios
 
 # Let's Code React-Native
 
