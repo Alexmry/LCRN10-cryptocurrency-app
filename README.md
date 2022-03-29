@@ -4,9 +4,9 @@ _https://www.youtube.com/watch?v=xBmx2eaozck&t=349s&ab_channel=ByProgrammers_
 
 ## Set up
 
-$ npm install
+  $ npm install
 
-$ npm start
+  $ npm start
 
 # Let's Code React-Native
 
