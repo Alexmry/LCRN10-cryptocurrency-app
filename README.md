@@ -8,6 +8,8 @@ _https://www.youtube.com/watch?v=xBmx2eaozck&t=349s&ab_channel=ByProgrammers_
 
     npm start
 
+in the project file / ios folder, open up CryptocurrencyApp.xcworkspace
+
     react-native run-ios
 
 # Let's Code React-Native
