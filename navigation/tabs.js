@@ -36,7 +36,7 @@ const Tabs = () => {
           component={Home}
           options={{
             tabBarIcon: ({ focused }) => (
-              <View sytle={{ alignItems: "center", justifyContent: "center" }}>
+              <View style={{ alignItems: "center", justifyContent: "center" }}>
                 <Image
                   source={icons.home}
                   resizeMode="contain"
@@ -63,7 +63,7 @@ const Tabs = () => {
           component={Home}
           options={{
             tabBarIcon: ({ focused }) => (
-              <View sytle={{ alignItems: "center", justifyContent: "center" }}>
+              <View style={{ alignItems: "center", justifyContent: "center" }}>
                 <Image
                   source={icons.pie_chart}
                   resizeMode="contain"
@@ -88,7 +88,7 @@ const Tabs = () => {
         <Tab.Screen name="Transaction" component={Home} />
         <Tab.Screen name="Prices" component={Home} options={{
             tabBarIcon: ({ focused }) => (
-              <View sytle={{ alignItems: "center", justifyContent: "center" }}>
+              <View style={{ alignItems: "center", justifyContent: "center" }}>
                 <Image
                   source={icons.line_graph}
                   resizeMode="contain"
@@ -109,7 +109,7 @@ const Tabs = () => {
 
         <Tab.Screen name="Settings" component={Home} options={{
             tabBarIcon: ({ focused }) => (
-              <View sytle={{ alignItems: "center", justifyContent: "center" }}>
+              <View style={{ alignItems: "center", justifyContent: "center" }}>
                 <Image
                   source={icons.settings}
                   resizeMode="contain"
