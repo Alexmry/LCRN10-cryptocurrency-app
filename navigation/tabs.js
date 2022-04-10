@@ -7,6 +7,7 @@ import {
     StyleSheet
 } from "react-native";
 import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom-tabs"
+import LinearGradient from "react-native-linear-gradient";
 
 import { Home } from "../screens"
 import { COLORS, FONTS, icons } from "../constants"
@@ -15,7 +16,22 @@ const Tab = createBottomTabNavigator()
 
 const Tabs = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+            tabBarOptions={{
+                showLabel: false,
+                style: {
+                    postions: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    elevation: 0,
+                    backgroundColor: COLORS.white,
+                    borderTopColor: "transparent",
+                    height: 100
+                }
+            }}  
+
+        >
             <Tab.Screen
                 name="Home"
                 component={Home}
@@ -23,6 +39,22 @@ const Tabs = () => {
             <Tab.Screen
                 name="Portfolio"
                 component={Home}
+                options= {{
+                    tabBarIcon: ({focused}) => (
+                        <View sytle = {{alignItems: 'center', justifyContent: 'center'}}>
+                            <Image
+                                source={icons.home}
+                                resizeMode="contain"
+                                style = {{
+                                    width: 30,
+                                    height: 30,
+                                    tintColor: focused ? COLORS.primary : COLORS.black
+                                }}
+                            />
+                            <Text></Text>
+                        </View>
+                    )
+                }}
             />
             <Tab.Screen
                 name="Transaction"
