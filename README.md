@@ -7,7 +7,7 @@ _https://www.youtube.com/watch?v=xBmx2eaozck&t=349s&ab_channel=ByProgrammers_
     npm install
 
     npm start
-
+    
     sudo gem install cocoapods
 
 cf https://aungmt.medium.com/ios-on-rn-0-60-4-7ff0d1bc9d66
