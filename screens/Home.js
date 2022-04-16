@@ -64,8 +64,8 @@ const Home = ({ navigation }) => {
                   justifyContent: "center",
                 }}
               >
-                  <Text></Text>
-                  <Text></Text>
+                  <Text style={{color: COLORS.white, ...FONTS.h3}}>Your Portfolio Balance</Text>
+                  <Text>${dummyData.portfolio.balance}</Text>
                   <Text></Text>
               </View>
 
