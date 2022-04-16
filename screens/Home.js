@@ -10,6 +10,8 @@ import {
     ImageBackground
 } from 'react-native';
 
+
+import {PriceAlert} from '../components'
 import { dummyData, COLORS, SIZES, FONTS, icons, images } from '../constants';
 
 const Home = ({ navigation }) => {
@@ -163,10 +165,17 @@ const Home = ({ navigation }) => {
         );
     }
 
+    function renderAlert() {
+      return (
+        <PriceAlert />
+      )
+    }
+
     return (
         <ScrollView>
             <View style={{flex: 1, paddingBottom: 130}}>
                 {renderHearder()}
+                {renderAlert()} 
             </View>
         </ScrollView>
     )
