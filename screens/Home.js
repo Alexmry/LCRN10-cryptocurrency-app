@@ -64,9 +64,21 @@ const Home = ({ navigation }) => {
                   justifyContent: "center",
                 }}
               >
-                  <Text style={{color: COLORS.white, ...FONTS.h3}}>Your Portfolio Balance</Text>
-                  <Text>${dummyData.portfolio.balance}</Text>
-                  <Text></Text>
+                <Text style={{ color: COLORS.white, ...FONTS.h3 }}>
+                  Your Portfolio Balance
+                </Text>
+                <Text
+                  style={{
+                    marginTop: SIZES.base,
+                    color: COLORS.white,
+                    ...FONTS.h1,
+                  }}
+                >
+                  ${dummyData.portfolio.balance}
+                </Text>
+                <Text style={{ color: COLORS.white, ...FONTS.body5 }}>
+                  {dummyData.portfolio.changes} Last 24 hours
+                </Text>
               </View>
 
               {/* Tranding */}
