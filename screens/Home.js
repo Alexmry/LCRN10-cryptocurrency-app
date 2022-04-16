@@ -37,7 +37,7 @@ const Home = ({ navigation }) => {
                   marginTop: SIZES.padding * 2,
                   width: "100%",
                   alignItems: "flex-end",
-                  paddingHorizontal: SIZES.padding
+                  paddingHorizontal: SIZES.padding,
                 }}
               >
                 <TouchableOpacity
@@ -45,19 +45,29 @@ const Home = ({ navigation }) => {
                     width: 35,
                     heigth: 35,
                     alignItems: "center",
-                    justifyContent: 'center'
+                    justifyContent: "center",
                   }}
-                  onPress = {()=>  console.log('Notifications on press')}
+                  onPress={() => console.log("Notifications on press")}
                 >
-                    <Image
-                        source={icons.notification_white}
-                        resizeMode='contain'
-                        style={{flex: 1}}
-                    />
+                  <Image
+                    source={icons.notification_white}
+                    resizeMode="contain"
+                    style={{ flex: 1 }}
+                  />
                 </TouchableOpacity>
               </View>
 
               {/* Balance */}
+              <View
+                style={{
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                  <Text></Text>
+                  <Text></Text>
+                  <Text></Text>
+              </View>
 
               {/* Tranding */}
             </ImageBackground>
