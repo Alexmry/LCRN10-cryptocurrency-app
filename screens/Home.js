@@ -14,13 +14,31 @@ import { dummyData, COLORS, SIZES, FONTS, icons, images } from '../constants';
 
 const Home = ({ navigation }) => {
 
+    const [trending, setTrending] = React.useState(dummyData.trendingCurrencies)
+
     function renderHearder() {
+
+        const renderItem = ({item, index}) => (
+            <TouchableOpacity
+                style= {{
+                    width: 180,
+                    paddingVertical: SIZES.padding,
+                    paddingHorizontal: SIZES.padding,
+                    marginLeft: index == 0 ? SIZES.padding : 0,
+                    marginRight: SIZES.radius,
+                    borderRadius: 10,
+                }}
+            >
+
+            </TouchableOpacity>
+        )
+
         return (
           <View
             style={{
               width: "100%",
               height: 290,
-              ...styles.shadow,
+              ...styles.shadow
             }}
           >
             <ImageBackground
@@ -37,7 +55,7 @@ const Home = ({ navigation }) => {
                   marginTop: SIZES.padding * 2,
                   width: "100%",
                   alignItems: "flex-end",
-                  paddingHorizontal: SIZES.padding,
+                  paddingHorizontal: SIZES.padding
                 }}
               >
                 <TouchableOpacity
@@ -45,7 +63,7 @@ const Home = ({ navigation }) => {
                     width: 35,
                     heigth: 35,
                     alignItems: "center",
-                    justifyContent: "center",
+                    justifyContent: "center"
                   }}
                   onPress={() => console.log("Notifications on press")}
                 >
@@ -71,7 +89,7 @@ const Home = ({ navigation }) => {
                   style={{
                     marginTop: SIZES.base,
                     color: COLORS.white,
-                    ...FONTS.h1,
+                    ...FONTS.h1
                   }}
                 >
                   ${dummyData.portfolio.balance}
@@ -82,6 +100,30 @@ const Home = ({ navigation }) => {
               </View>
 
               {/* Tranding */}
+              <View
+                style={{
+                  postion: "absolute",
+                  bottom: "-30%",
+                }}
+              >
+                <Text
+                  style={{
+                    marginLeft: SIZES.padding,
+                    color: COLORS.white,
+                    ...FONTS.h2
+                  }}
+                >
+                  Trending
+                </Text>
+                <FlatList
+                    contentContainerStyle={{marginTop: SIZES.base}}
+                    data={trending}
+                    renderItem={renderItem}
+                    keyExtractor={item=> `${item.id}`}
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                />
+              </View>
             </ImageBackground>
           </View>
         );
