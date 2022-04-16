@@ -10,18 +10,40 @@ import {
     ImageBackground
 } from 'react-native';
 
-import { dummyData, COLORS, SIZES, FONTS } from '../constants';
+import { dummyData, COLORS, SIZES, FONTS, icons, images } from '../constants';
 
 const Home = ({ navigation }) => {
-    return (
-        <View style={styles.container}>
-            <Text>Home</Text>
-            <TouchableOpacity
-                onPress={() => navigation.navigate("CryptoDetail")}
+
+    function renderHearder() {
+        return (
+            <View
+            style={{
+                width: "100%",
+                height: 290,
+                ...styles.shadow
+            }}
             >
-                <Text>Navigate to CryptoDetail</Text>
-            </TouchableOpacity>
-        </View>
+                <ImageBackground
+                    source={images.banner}
+                    resizeMode="cover"
+                    style={{
+                        flex: 1,
+                        alignItems: 'center'
+                        }}
+                >
+
+                </ImageBackground>
+
+            </View>
+        )
+    }
+
+    return (
+        <ScrollView>
+            <View style={{flex: 1, paddingBottom: 130}}>
+                {renderHearder()}
+            </View>
+        </ScrollView>
     )
 }
 
