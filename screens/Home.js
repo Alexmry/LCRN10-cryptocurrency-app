@@ -16,26 +16,53 @@ const Home = ({ navigation }) => {
 
     function renderHearder() {
         return (
-            <View
+          <View
             style={{
-                width: "100%",
-                height: 290,
-                ...styles.shadow
+              width: "100%",
+              height: 290,
+              ...styles.shadow,
             }}
+          >
+            <ImageBackground
+              source={images.banner}
+              resizeMode="cover"
+              style={{
+                flex: 1,
+                alignItems: "center",
+              }}
             >
-                <ImageBackground
-                    source={images.banner}
-                    resizeMode="cover"
-                    style={{
-                        flex: 1,
-                        alignItems: 'center'
-                        }}
+              {/* Header Bar */}
+              <View
+                style={{
+                  marginTop: SIZES.padding * 2,
+                  width: "100%",
+                  alignItems: "flex-end",
+                  paddingHorizontal: SIZES.padding
+                }}
+              >
+                <TouchableOpacity
+                  style={{
+                    width: 35,
+                    heigth: 35,
+                    alignItems: "center",
+                    justifyContent: 'center'
+                  }}
+                  onPress = {()=>  console.log('Notifications on press')}
                 >
+                    <Image
+                        source={icons.notification_white}
+                        resizeMode='contain'
+                        style={{flex: 1}}
+                    />
+                </TouchableOpacity>
+              </View>
 
-                </ImageBackground>
+              {/* Balance */}
 
-            </View>
-        )
+              {/* Tranding */}
+            </ImageBackground>
+          </View>
+        );
     }
 
     return (
