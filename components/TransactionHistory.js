@@ -10,9 +10,20 @@ const TransactionHistory = ({ customContainerStyle, history }) => {
         alignItems: "center",
         paddingVertical: SIZES.base,
       }}
-      onPress={()=> console.log(item)}
+      onPress={() => console.log(item)}
     >
-
+      <Image
+        source={icons.transaction}
+        style={{
+          width: 30,
+          height: 30,
+          tintColor: COLORS.primary,
+        }}
+      />
+      <View style={{ flex: 1, marginLeft: SIZES.radius }}>
+        <Text>{item.description}</Text>
+        <Text>{item.date}</Text>
+      </View>
     </TouchableOpacity>
   );
 
