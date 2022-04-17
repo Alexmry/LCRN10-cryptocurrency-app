@@ -15,7 +15,7 @@ const PriceAlert = ({customContainerStyle}) => {
         style={{
           flexDirection: "row",
           alignItems: "center",
-          marginTop: SIZES.padding * 4.5,
+          marginTop: SIZES.padding * 6,
           marginHorizontal: SIZES.padding,
           paddingVertical: SIZES.padding,
           paddingHorizontal: SIZES.radius,
@@ -40,7 +40,7 @@ const PriceAlert = ({customContainerStyle}) => {
         >
           <Text style={{ ...FONTS.h3 }}>Set Price Alter</Text>
           <Text style={{ ...FONTS.body4 }}>
-            Get notified zhen you coins are moving
+            Get notified when you coins are moving
           </Text>
         </View>
 

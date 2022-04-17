@@ -24,6 +24,7 @@ const Home = ({ navigation }) => {
           <TouchableOpacity
             style={{
               width: 180,
+              height: 160,
               paddingVertical: SIZES.padding,
               paddingHorizontal: SIZES.padding,
               marginLeft: index == 0 ? SIZES.padding : 0,
@@ -41,29 +42,19 @@ const Home = ({ navigation }) => {
                   style={{
                     marginTop: 5,
                     width: 25,
-                    height: 25,
+                    height: 25
                   }}
                 />
               </View>
-              <View
-                style={{
-                  marginLeft: SIZES.base,
-                }}
-              >
+              <View style={{ marginLeft: SIZES.base }}>
                 <Text style={{ ...FONTS.h2 }}>{item.currency}</Text>
-                <Text style={{ color: COLORS.gray, ...FONTS.body3 }}>
-                  {item.code}
-                </Text>
+                <Text style={{ color: COLORS.gray, ...FONTS.body3 }}>{item.code}</Text>
               </View>
             </View>
 
             {/* value */}
-            <View
-              style={{
-                marginTop: SIZES.radius,
-              }}
-            >
-              <Text style={{ ...FONTS.h2 }}>${item.amout}</Text>
+            <View style={{ marginTop: SIZES.radius }}>
+              <Text style={{ ...FONTS.h2 }}>${item.amount}</Text>
               <Text style={{ color: item.type == "I" ? COLORS.green : COLORS.red, ...FONTS.h3}}>{item.changes}</Text>
             </View>
           </TouchableOpacity>
@@ -135,7 +126,7 @@ const Home = ({ navigation }) => {
                 </Text>
               </View>
 
-              {/* Tranding */}
+              {/* Trending */}
               <View
                 style={{
                   postion: "absolute",
@@ -155,7 +146,7 @@ const Home = ({ navigation }) => {
                     contentContainerStyle={{marginTop: SIZES.base}}
                     data={trending}
                     renderItem={renderItem}
-                    keyExtractor={item=> `${item.id}`}
+                    keyExtractor={item => `${item.id}`}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                 />
