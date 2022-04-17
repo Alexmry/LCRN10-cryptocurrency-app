@@ -9,6 +9,7 @@ import {
     Image,
     ImageBackground
 } from 'react-native';
+import { LearnMoreLinks } from 'react-native/Libraries/NewAppScreen';
 
 
 import {PriceAlert} from '../components'
@@ -162,11 +163,36 @@ const Home = ({ navigation }) => {
       )
     }
 
+
+    function renderNotice() {
+      return (
+        <View
+          style={{
+            marginTop: SIZES.padding,
+            marginHorizontal: SIZES.padding,
+            padding: 20,
+            borderRadius: SIZES.radius,
+            backgroundColor: COLORS.secondary,
+            ...styles.shadow
+          }}
+        >
+          <Text style={{color: COLORS.white, ...FONTS.h3}}>Investing Safety</Text>
+          <Text style={{ marginTop: SIZES.base, color: COLORS.white, ...FONTS.body4, lineHeight: 18}}>It’s very difficult to time an investment, especially when the market is voltile. Learn how to use dollar cost averagng to your adventage</Text>
+
+          <TouchableOpacity style={{ marginTop: SIZES.base}} onPress={() => console.log('laern more')}> 
+            <Text style={{ textDecorationLine: 'underline', color: COLORS.green, ...FONTS.h3}}>Learn More</Text>
+          </TouchableOpacity>
+
+        </View>
+      );
+    }
+
     return (
         <ScrollView>
             <View style={{flex: 1, paddingBottom: 130}}>
                 {renderHearder()}
                 {renderAlert()} 
+                {renderNotice()} 
             </View>
         </ScrollView>
     )
