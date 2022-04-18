@@ -7,7 +7,8 @@ import {
     FlatList,
     TouchableOpacity,
     Image,
-    ImageBackground
+    ImageBackground,
+    LogBox
 } from 'react-native';
 import { LearnMoreLinks } from 'react-native/Libraries/NewAppScreen';
 
@@ -20,6 +21,10 @@ const Home = ({ navigation }) => {
   const [trending, setTrending] = React.useState(dummyData.trendingCurrencies);
 
   const [transactionHistory, setTransactionHistory] = React.useState(dummyData.transactionHistory)
+
+  React.useEffect(() => {
+    LogBox.ignoreLogs(['VirtualizedList should not be nested'])
+  }, [])
 
   function renderHearder() {
     const renderItem = ({ item, index }) => (

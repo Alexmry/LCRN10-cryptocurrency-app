@@ -45,7 +45,7 @@ const PriceAlert = ({customContainerStyle}) => {
         </View>
 
         <Image
-          source={icons.rigth_arrow}
+          source={icons.right_arrow}
           style={{
             width: 25,
             height: 25,
