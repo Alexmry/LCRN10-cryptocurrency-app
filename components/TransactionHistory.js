@@ -21,8 +21,8 @@ const TransactionHistory = ({ customContainerStyle, history }) => {
         }}
       />
       <View style={{ flex: 1, marginLeft: SIZES.radius }}>
-        <Text>{item.description}</Text>
-        <Text>{item.date}</Text>
+        <Text style={{...FONTS.h3}}>{item.description}</Text>
+        <Text style={{color: COLORS.gray, ...FONTS.body4}}>{item.date}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -44,6 +44,7 @@ const TransactionHistory = ({ customContainerStyle, history }) => {
         scrollEnabled={false}
         data={history}
         keyExtractor={(item) => `${item.id}`}
+        renderItem={renderItem}
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={() => {
           return (
