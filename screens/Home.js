@@ -27,6 +27,7 @@ const Home = ({ navigation }) => {
   }, [])
 
   function renderHearder() {
+
     const renderItem = ({ item, index }) => (
       <TouchableOpacity
         style={{
@@ -39,6 +40,7 @@ const Home = ({ navigation }) => {
           borderRadius: 10,
           backgroundColor: COLORS.white,
         }}
+        onPress={() => navigation.navigate("CryptoDetail", {urrency: item})}
       >
         {/* currency */}
         <View style={{ flexDirection: "row" }}>
