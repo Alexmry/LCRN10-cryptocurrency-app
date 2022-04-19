@@ -14,6 +14,24 @@ import { dummyData, COLORS, SIZES, FONTS, icons } from "../constants";
 import { HeaderBar } from "../components";
 
 const CryptoDetail = ({ navigation }) => {
+
+    function renderChart() {
+      return (
+        <View
+          style={{
+            marginTop: SIZES.padding,
+            marginHorizontal: SIZES.radius,
+            alignItems: 'center',
+            borderRadius: SIZES.radius,
+            backgroundColor: COLORS.white,
+            ...styles.shadow
+          }}
+        >
+
+        </View>
+      );
+    }
+
     return (
       <SafeAreaView
         style={{
@@ -24,6 +42,11 @@ const CryptoDetail = ({ navigation }) => {
           <HeaderBar
             right={true}
           />
+          <ScrollView>
+            <View style={{flex: 1, paddingBottom: SIZES.padding}}>
+              {renderChart()}
+            </View>
+          </ScrollView>
       </SafeAreaView>
     );
 }
