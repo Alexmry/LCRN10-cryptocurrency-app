@@ -12,6 +12,7 @@ import {
 
 import { dummyData, COLORS, SIZES, FONTS, icons } from "../constants";
 import { HeaderBar } from "../components";
+import { CurrencyLabel  } from "../components";
 
 const CryptoDetail = ({ navigation }) => {
 
@@ -21,13 +22,29 @@ const CryptoDetail = ({ navigation }) => {
           style={{
             marginTop: SIZES.padding,
             marginHorizontal: SIZES.radius,
-            alignItems: 'center',
+            alignItems: "center",
             borderRadius: SIZES.radius,
             backgroundColor: COLORS.white,
-            ...styles.shadow
+            ...styles.shadow,
           }}
         >
-
+          {/* Header */}
+          <View
+            style={{
+              flexDirection: "row",
+              marginTop: SIZES.padding,
+              marginHorizontal: SIZES.padding
+            }}
+          >
+            <View style={{ flex: 1 }}>
+              <CurrencyLabel
+              />
+            </View>
+            <View style={{ flexDirection: "row" }}></View>
+          </View>
+          {/* Chart */}
+          {/* Options */}
+          {/* Dots */}
         </View>
       );
     }
