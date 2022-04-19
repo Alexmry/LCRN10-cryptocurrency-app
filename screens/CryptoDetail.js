@@ -13,8 +13,16 @@ import {
 import { dummyData, COLORS, SIZES, FONTS, icons } from "../constants";
 import { HeaderBar } from "../components";
 import { CurrencyLabel  } from "../components";
+import { greaterThan } from 'react-native-reanimated';
 
-const CryptoDetail = ({ navigation }) => {
+const CryptoDetail = ({ route, navigation }) => {
+
+    const [selectedCurrency, setSelectedCurrency] = React.useState(null)
+
+    React.useEffect(()=>{
+      const {currency} = route.params;
+      setSelectedCurrency(currency)
+    }, [])
 
     function renderChart() {
       return (
@@ -33,14 +41,28 @@ const CryptoDetail = ({ navigation }) => {
             style={{
               flexDirection: "row",
               marginTop: SIZES.padding,
-              marginHorizontal: SIZES.padding
+              marginHorizontal: SIZES.padding,
             }}
           >
             <View style={{ flex: 1 }}>
               <CurrencyLabel
+                icon={selectedCurrency?.image}
+                currency={selectedCurrency?.currency}
+                code={selectedCurrency?.code}
               />
             </View>
-            <View style={{ flexDirection: "row" }}></View>
+            <View>
+              <Text style={{ ...FONTS.h3 }}>${selectedCurrency?.amount}</Text>
+              <Text
+                style={{
+                  color:
+                    selectedCurrency?.type == "I" ? COLORS.green : COLORS.red,
+                  ...FONTS.body3,
+                }}
+              >
+                {selectedCurrency?.changes}
+              </Text>
+            </View>
           </View>
           {/* Chart */}
           {/* Options */}

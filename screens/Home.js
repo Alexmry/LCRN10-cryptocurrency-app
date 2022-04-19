@@ -40,7 +40,7 @@ const Home = ({ navigation }) => {
           borderRadius: 10,
           backgroundColor: COLORS.white,
         }}
-        onPress={() => navigation.navigate("CryptoDetail", {urrency: item})}
+        onPress={() => navigation.navigate("CryptoDetail", {currency: item})}
       >
         {/* currency */}
         <View style={{ flexDirection: "row" }}>
