@@ -94,6 +94,15 @@ const CryptoDetail = ({ route, navigation }) => {
                   y: ["15", "30", "45"],
                 }}
               />
+              <VictoryScatter
+                data={selectedCurrency?.chartData}
+                size={7}
+                style={{
+                  data: {
+                    fill: COLORS.secondary,
+                  },
+                }}
+              />
             </VictoryChart>
           </View>
 
