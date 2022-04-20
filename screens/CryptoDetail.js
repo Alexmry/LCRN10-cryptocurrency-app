@@ -18,6 +18,8 @@ import { dummyData, COLORS, SIZES, FONTS, icons } from "../constants";
 import { HeaderBar } from "../components";
 import { CurrencyLabel  } from "../components";
 import { greaterThan } from 'react-native-reanimated';
+import { transform } from '@babel/core';
+import { TransitionPresets } from '@react-navigation/stack';
 
 const CryptoDetail = ({ route, navigation }) => {
 
@@ -99,8 +101,26 @@ const CryptoDetail = ({ route, navigation }) => {
                 size={7}
                 style={{
                   data: {
-                    fill: COLORS.secondary,
+                    fill: COLORS.secondary
                   },
+                }}
+              />
+              <VictoryAxis
+                style={{
+                  grid: {
+                    stroke: "transparent"
+                  }
+                }}
+              />
+              <VictoryAxis
+                dependentAxis
+                style={{
+                  axis: {
+                    stroke: "transparent"
+                  },
+                  grid: {
+                    stroke: "grey"
+                  }
                 }}
               />
             </VictoryChart>
