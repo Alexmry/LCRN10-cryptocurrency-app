@@ -77,9 +77,23 @@ const CryptoDetail = ({ route, navigation }) => {
             <VictoryChart
               theme={VictoryCustomTheme}
               height={220}
-              width={SIZES.width-40}
+              width={SIZES.width - 40}
             >
-
+              <VictoryLine
+                style={{
+                  data: {
+                    stroke: COLORS.secondary,
+                  },
+                  parent: {
+                    border: "1px solid #ccc",
+                  },
+                }}
+                data={selectedCurrency?.chartData}
+                categories={{
+                  x: ["15 MIN", "30 MIN", "45 MIN", "60 MIN"],
+                  y: ["15", "30", "45"],
+                }}
+              />
             </VictoryChart>
           </View>
 
