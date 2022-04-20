@@ -10,6 +10,10 @@ import {
     Animated
 } from 'react-native';
 
+import { VictoryScatter, VictoryLine, VictoryChart, VictoryAxis} from 'victory-native';
+
+import { VictoryCustomTheme} from "../styles"
+
 import { dummyData, COLORS, SIZES, FONTS, icons } from "../constants";
 import { HeaderBar } from "../components";
 import { CurrencyLabel  } from "../components";
@@ -65,6 +69,20 @@ const CryptoDetail = ({ route, navigation }) => {
             </View>
           </View>
           {/* Chart */}
+          <View
+            style={{
+              marginTop: -25,
+            }}
+          >
+            <VictoryChart
+              theme={VictoryCustomTheme}
+              height={220}
+              width={SIZES.width-40}
+            >
+
+            </VictoryChart>
+          </View>
+
           {/* Options */}
           {/* Dots */}
         </View>
